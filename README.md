@@ -43,6 +43,15 @@ The `RequestManager` class is a multithreaded utility designed to handle concurr
 
       manager.shutdown();
 
+Example Output
+
+Result: Request 1 processed.
+Result: Request 2 processed.
+Result: Request 3 processed.
+Result: Request 4 processed.
+...
+
+
 
 
     
