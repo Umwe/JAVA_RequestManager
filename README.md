@@ -26,4 +26,20 @@ The `RequestManager` class is a multithreaded utility designed to handle concurr
 
 3.Define a list of Callable<String> tasks representing requests, and submit them for execution:
 
+      List<Callable<String>> requests = new ArrayList<>();
+      for (int i = 1; i <= 10; i++) {
+          final int requestId = i;
+          requests.add(() -> {
+              // Simulate request processing
+              Thread.sleep(1000);  // Simulate some work
+              return "Request " + requestId + " processed.";
+          });
+      }
+
+4.Handle the requests using handleRequests:
+      manager.handleRequests(requests);
+
+5.Once all tasks are processed, ensure the executor service is shut down properly:
+
+
     
