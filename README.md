@@ -41,5 +41,8 @@ The `RequestManager` class is a multithreaded utility designed to handle concurr
 
 5.Once all tasks are processed, ensure the executor service is shut down properly:
 
+      manager.shutdown();
+
+
 
     
